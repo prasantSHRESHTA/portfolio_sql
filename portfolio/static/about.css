@@ -1,0 +1,36 @@
+
+p {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.o {
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 0px;
+    color: #DDD0C8;
+}
+
+.h {
+    font-family: Dancing Script;
+    color: #ffffffe3;
+    font-size: 70px;
+}
+
+
+.sub-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px;
+}
+
+.headshot {
+    width: 300px;
+    border-radius: 150px;
+    margin-left: 80px;
+}
+
+.headshot-container {
+    display: flex;
+    align-items: center;
+}

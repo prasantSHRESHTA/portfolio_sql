@@ -1,0 +1,54 @@
+{% load static %}
+<link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}"/>
+
+<link href="{% static 'education.css' %}" rel="stylesheet">
+<link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+{% include 'nav.html' %}
+<title>
+    Prasant Education
+</title>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-lg-8 offset-lg-2">
+            {% for edu in educ %}
+            <article class="education-item">
+                <i class="education-icon fa fa-graduation-cap"></i>
+                <h4 class="education-date">{{ edu.end_year }}</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="degree">
+                            {{ edu.degree}}
+                        </div>
+
+                        <div class="inner_cont">
+                            <div class="inner">
+                                {{ edu.school }}
+                                </h>
+                                <div class="year">
+                                    {% if edu.start_date %}
+                                    {{ edu.start_year }} - {{ edu.end_year }}
+                                    {% else %}
+                                    {{ edu.end_year }}
+                                    {% endif %}
+                            
+
+                                    {% if edu.degree_link %}
+
+                                    <p class="certificate">Link to <a href="/media/{{ edu.degree_link }}"
+                                            target="_blank">Certificates</a>.</p>
+
+                                    {% endif %}
+                                </div>
+
+
+                            </div>
+                        </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+{% include 'footer.html' %}

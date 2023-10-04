@@ -1,0 +1,68 @@
+html{
+    height: fit-content;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+}
+
+
+body {
+    background-color: #222;
+    height: max-content;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+}
+
+#Iframe-Master-CC-and-Rs {
+    max-width: 80%;
+    height: fit-content;
+    overflow: hidden;
+    background-image: url("/static/wood.jpg")
+}
+
+.responsive-wrapper {
+    position: relative;
+    height: 0;
+
+
+}
+
+.responsive-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+
+.responsive-wrapper-wxh-572x612 {
+    padding-bottom: 107%;
+}
+
+
+.set-border {
+    border: 5px inset #4f4f4f;
+}
+
+.set-box-shadow {
+    -webkit-box-shadow: 4px 4px 14px #4f4f4f;
+    -moz-box-shadow: 4px 4px 14px #4f4f4f;
+    box-shadow: 4px 4px 14px #4f4f4f;
+}
+
+.set-padding {
+    padding: 40px;
+}
+
+.set-margin {
+    margin: 30px;
+}
+
+.center-block-horiz {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}

@@ -1,0 +1,51 @@
+{% load static %}
+<link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}"/>
+<link href="{% static 'work.css' %}" rel="stylesheet">
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prasant Works</title>
+</head>
+
+<body>
+
+    {% include "nav.html" %}
+
+
+    <!-- Project list -->
+    <div class="wrapper">
+        {% for name in proj %}
+        <div class="row">
+            <div class="col-1">
+                <div class="title">
+                    {{name.project_title}}
+                </div>
+                <div class="skills">
+                    Tools And Technologies Used : {{ name.skills_used }}
+                </div>
+                <div class="desc">
+                    {{ name.description }}
+                </div>
+
+                <div class="button">
+                    {% if name.github_link %}
+                    <a href="{{name.github_link}}" target="_blank" class="btn">PROJECT LINK</a>
+                    {% endif %}
+
+                </div>
+
+
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% include "footer.html" %}
+</body>
+
+</html>

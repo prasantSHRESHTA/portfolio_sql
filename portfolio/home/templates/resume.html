@@ -1,0 +1,36 @@
+{% load static %}
+
+<link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}"/>
+<link href="{% static 'resume.css' %}" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prasant resume</title>
+</head>
+
+<body>
+    {% include "nav.html" %}
+    {% for file in res %}
+
+
+    <div id="Iframe-Master-CC-and-Rs" class="set-margin set-padding set-border set-box-shadow center-block-horiz">
+        <div class="responsive-wrapper 
+       responsive-wrapper-wxh-572x612" style="-webkit-overflow-scrolling: touch; overflow: auto;">
+
+            <iframe src="/media/{{ file.resume }}">
+                <p style="font-size: 110%;"><em><strong>ERROR: </strong>
+                        An &#105;frame should be displayed here but your browser version does not support &#105;frames.
+                    </em>Please update your browser to its most recent version and try again.</p>
+            </iframe>
+
+        </div>
+    </div>
+
+    {% endfor %}
+
+    {% include "footer.html" %}
+</body>
+
+</html>

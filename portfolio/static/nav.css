@@ -1,0 +1,51 @@
+
+.topbar {
+    box-sizing: border-box;
+    height: 150px;
+    background-image: url("/static/wood.jpg");
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.topbar img{
+    margin-top: 20px;
+}
+
+.topbar li{
+    list-style-type: none;
+}
+
+.topbar ul {
+    list-style-type: none;
+}
+
+
+.topbar li #right {
+    padding-top: 50px;
+    float: right;
+}
+
+.topbar li #TOP_name {
+    font-size: larger;
+    font-family: cursive;
+
+}
+
+.topbar li a {
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    padding: 14px 20px;
+    margin-bottom: -45;
+    text-decoration: none;
+}
+
+.topbar li #right:hover {
+    background-color: grey;
+    border-top-right-radius: 20px;
+    border-top-left-radius:  20px;
+}
+
+
